@@ -1,4 +1,5 @@
 import sys
+import time
 from PyQt5 import QtGui
 from PyQt5.QtWidgets import QApplication
 
@@ -12,6 +13,7 @@ app.setWindowIcon(QtGui.QIcon("src/favicon.png"))
 
 widget = App()
 widget.show()
+# widget.startIdentification()
 
 try:
     sys.exit(app.exec_())

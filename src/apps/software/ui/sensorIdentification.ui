@@ -58,11 +58,29 @@
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="continueButton">
+  <widget class="QPushButton" name="identifyButton">
    <property name="geometry">
     <rect>
      <x>340</x>
      <y>360</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Identify</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="continueButton">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>420</y>
      <width>121</width>
      <height>41</height>
     </rect>

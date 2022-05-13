@@ -13,15 +13,17 @@ class SensorIdentification(QWidget):
         loadUi("./src/apps/software/ui/sensorIdentification.ui", self)
 
         self.continueButton.clicked.connect(self.handleContinue)
+        self.identifyButton.clicked.connect(self.identify)
 
         self.identificationDict = {}
 
         self.identified = 0
         self.numberOfSensors = len(SENSORS)
-
-        self.identify()
+        self.update()
 
     def identify(self):
+        self.identified = 0
+        self.identificationDict = {}
         for port in PORTS:
             address = identifyAddressInPort(port)
             self.identificationDict[address] = port
@@ -30,7 +32,19 @@ class SensorIdentification(QWidget):
 
     def update(self):
         self.identificationLabel.setText(
-            f"{self.identified} / {self.numberOfSensors} sensor identified"
+            f"""
+                <html>
+                    <head/>
+                    <body>
+                        <p align="center">
+                            <span style=" font-size:14pt;">
+                            {self.identified} / {self.numberOfSensors} sensor identified
+                            </span>
+                        </p>
+                    </body>
+                </html>
+            """
+            # f"{self.identified} / {self.numberOfSensors} sensor identified"
         )
         self.identificationProgressBar.setValue(
             self.identified * 100 / self.numberOfSensors

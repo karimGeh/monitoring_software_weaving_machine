@@ -1,7 +1,7 @@
 // This code is not for poduction and is only 
 // for testing how the python code will read from the arduino
 
-#define SENSOR_ADDR 0
+#define SENSOR_ADDR 2
 
 
 #define TIME_INTERVAL 50.0

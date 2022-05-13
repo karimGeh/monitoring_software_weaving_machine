@@ -32,6 +32,14 @@ class App(QtWidgets.QStackedWidget):
         self.setFixedWidth(WINDOW_WIDTH)
         self.setCurrentIndex(self.pages[Screens.SensorIdentification].index)
 
+    # def show(self):
+    #     super(App, self).show()
+    #     # self.identify()
+    #     print("tot")
+
+    def startIdentification(self):
+        self.pages[Screens.SensorIdentification].innerWidget.identify()
+
     def goTo(self, page):
         if page not in self.pages:
             raise Exception("page not found")

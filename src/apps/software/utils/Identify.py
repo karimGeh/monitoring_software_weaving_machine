@@ -6,10 +6,18 @@ def identifyAddressInPort(COM: str) -> int:
     ser = serial.Serial(COM, 9600)
     ser.close()
     ser.open()
-    while not ser.inWaiting():
+    while True:
         time.sleep(0.5)
 
-    address = int(ser.readline().decode())
+        if not ser.inWaiting():
+            continue
 
-    ser.close()
-    return address
+        try:
+            address = ser.readline().decode()
+            print(address)
+            address = int(address)
+
+            ser.close()
+            return address
+        except:
+            continue
