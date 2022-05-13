@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="images">
+    <file>assets/EnsamLogo.png</file>
+  </qresource>
+</RCC>

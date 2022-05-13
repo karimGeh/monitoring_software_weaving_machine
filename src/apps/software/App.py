@@ -11,31 +11,27 @@ from screens.MonitoringScreen import MonitoringScreen
 from router import Screens
 
 # ! configs
-from config import (
-    WINDOW_HEIGHT,
-    WINDOW_WIDTH,
-    WINDOW_TITLE
-)
+from config.software import WINDOW_HEIGHT, WINDOW_WIDTH, WINDOW_TITLE
 
 
 class App(QtWidgets.QStackedWidget):
-  def __init__(self) -> None:
-    super(App, self).__init__()
+    def __init__(self) -> None:
+        super(App, self).__init__()
 
-    self.pages = {
-        Screens.MonitoringScreen: InnerWidget(self, MonitoringScreen),
-    }
+        self.pages = {
+            Screens.MonitoringScreen: InnerWidget(self, MonitoringScreen),
+        }
 
-    for value in self.pages.values():
-      self.addWidget(value.innerWidget)
+        for value in self.pages.values():
+            self.addWidget(value.innerWidget)
 
-    self.setWindowTitle(WINDOW_TITLE)
-    self.setFixedHeight(WINDOW_HEIGHT)
-    self.setFixedWidth(WINDOW_WIDTH)
-    self.setCurrentIndex(self.pages[Screens.MonitoringScreen].index)
+        self.setWindowTitle(WINDOW_TITLE)
+        self.setFixedHeight(WINDOW_HEIGHT)
+        self.setFixedWidth(WINDOW_WIDTH)
+        self.setCurrentIndex(self.pages[Screens.MonitoringScreen].index)
 
-  def goTo(self, page):
-    if page not in self.pages:
-      raise Exception("page not found")
+    def goTo(self, page):
+        if page not in self.pages:
+            raise Exception("page not found")
 
-    self.setCurrentIndex(self.pages[page].index)
+        self.setCurrentIndex(self.pages[page].index)
