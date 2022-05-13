@@ -1,0 +1,10 @@
+**/*.rar
+**/*.zip
+
+
+.venv/**
+**/__pycache__
+.qt_for_python
+build
+dist
+**/*.spec

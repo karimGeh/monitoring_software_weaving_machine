@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>795</width>
+    <height>535</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Machine de tissage</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>Ressources/loom-network-loom4991.jpg</normaloff>Ressources/loom-network-loom4991.jpg</iconset>
+  </property>
+  <widget class="PlotWidget" name="graph">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>150</y>
+     <width>480</width>
+     <height>360</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelValeurBrute_2">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>285</y>
+     <width>101</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Longueur tissée :</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="title_2">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>20</y>
+     <width>241</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="html">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="title">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>491</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="html">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:700;&quot;&gt;Machine de tissage&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-style:italic;&quot;&gt;Réalisée par:&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-style:italic; color:#740000;&quot;&gt;ABOUZOUL Walid&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-style:italic; color:#740000;&quot;&gt;GEHAD Karim&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-style:italic; color:#740000;&quot;&gt;ZIAT Achraf&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>40</y>
+     <width>221</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>Ressources/EnsamLogo.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLCDNumber" name="lcdNumberValeurBrute">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>235</y>
+     <width>96</width>
+     <height>36</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 255, 127);
+color: rgb(0, 170, 0);</string>
+   </property>
+   <property name="smallDecimalPoint">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelUnite">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>165</y>
+     <width>111</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Etat des roulements :</string>
+   </property>
+  </widget>
+  <widget class="QTextBrowser" name="textBrowser">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>180</y>
+     <width>191</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="html">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Roulements lubrifiés&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLCDNumber" name="lcdNumberValeurBrute_2">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>300</y>
+     <width>96</width>
+     <height>36</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 255, 127);
+color: rgb(0, 170, 0);</string>
+   </property>
+   <property name="smallDecimalPoint">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelLubrification">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>220</y>
+     <width>161</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Nombre de tours des paliers :</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>510</y>
+     <width>20</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>20</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Button">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>43</red>
+         <green>43</green>
+         <blue>43</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Light">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>64</red>
+         <green>64</green>
+         <blue>64</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Midlight">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>53</red>
+         <green>53</green>
+         <blue>53</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Dark">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>21</red>
+         <green>21</green>
+         <blue>21</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Mid">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>29</red>
+         <green>29</green>
+         <blue>29</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Text">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="BrightText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="ButtonText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Window">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>43</red>
+         <green>43</green>
+         <blue>43</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Shadow">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="AlternateBase">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>21</red>
+         <green>21</green>
+         <blue>21</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="ToolTipBase">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>220</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="ToolTipText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Button">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>240</red>
+         <green>240</green>
+         <blue>240</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Light">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Midlight">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>227</red>
+         <green>227</green>
+         <blue>227</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Dark">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>160</red>
+         <green>160</green>
+         <blue>160</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Mid">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>160</red>
+         <green>160</green>
+         <blue>160</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Text">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="BrightText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="ButtonText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Window">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>240</red>
+         <green>240</green>
+         <blue>240</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Shadow">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>105</red>
+         <green>105</green>
+         <blue>105</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="AlternateBase">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>245</red>
+         <green>245</green>
+         <blue>245</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="ToolTipBase">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>220</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="ToolTipText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>21</red>
+         <green>21</green>
+         <blue>21</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Button">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>43</red>
+         <green>43</green>
+         <blue>43</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Light">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>64</red>
+         <green>64</green>
+         <blue>64</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Midlight">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>53</red>
+         <green>53</green>
+         <blue>53</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Dark">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>21</red>
+         <green>21</green>
+         <blue>21</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Mid">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>29</red>
+         <green>29</green>
+         <blue>29</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Text">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>21</red>
+         <green>21</green>
+         <blue>21</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="BrightText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="ButtonText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>21</red>
+         <green>21</green>
+         <blue>21</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>43</red>
+         <green>43</green>
+         <blue>43</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Window">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>43</red>
+         <green>43</green>
+         <blue>43</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Shadow">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="AlternateBase">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>245</red>
+         <green>245</green>
+         <blue>245</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="ToolTipBase">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>220</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="ToolTipText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelUnite_2">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>345</y>
+     <width>111</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Etat des courroies:</string>
+   </property>
+  </widget>
+  <widget class="QLCDNumber" name="lcdNumberDelaiMesure_2">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>460</y>
+     <width>64</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 147);
+color: rgb(0, 85, 255);</string>
+   </property>
+   <property name="midLineWidth">
+    <number>0</number>
+   </property>
+   <property name="segmentStyle">
+    <enum>QLCDNumber::Flat</enum>
+   </property>
+   <property name="value" stdset="0">
+    <double>0.000000000000000</double>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelRapportTh">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>395</y>
+     <width>191</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Rapport de transmission théorique:</string>
+   </property>
+  </widget>
+  <widget class="QTextBrowser" name="textBrowser_2">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>360</y>
+     <width>191</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="html">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Pas de glissement de la courroie&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelRapportReel">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>445</y>
+     <width>161</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Rapport de transmission réel:</string>
+   </property>
+  </widget>
+  <widget class="QLCDNumber" name="lcdNumberDelaiMesure">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>410</y>
+     <width>64</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 147);
+color: rgb(0, 85, 255);</string>
+   </property>
+   <property name="midLineWidth">
+    <number>0</number>
+   </property>
+   <property name="segmentStyle">
+    <enum>QLCDNumber::Flat</enum>
+   </property>
+   <property name="value" stdset="0">
+    <double>0.000000000000000</double>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PlotWidget</class>
+   <extends>QGraphicsView</extends>
+   <header>pyqtgraph</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
