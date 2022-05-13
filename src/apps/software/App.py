@@ -6,6 +6,7 @@ from utils.InnerWidget import InnerWidget
 
 # ! widgets
 from screens.MonitoringScreen import MonitoringScreen
+from screens.SensorIdentification import SensorIdentification
 
 # ! pages
 from router import Screens
@@ -19,6 +20,7 @@ class App(QtWidgets.QStackedWidget):
         super(App, self).__init__()
 
         self.pages = {
+            Screens.SensorIdentification: InnerWidget(self, SensorIdentification),
             Screens.MonitoringScreen: InnerWidget(self, MonitoringScreen),
         }
 
@@ -28,7 +30,7 @@ class App(QtWidgets.QStackedWidget):
         self.setWindowTitle(WINDOW_TITLE)
         self.setFixedHeight(WINDOW_HEIGHT)
         self.setFixedWidth(WINDOW_WIDTH)
-        self.setCurrentIndex(self.pages[Screens.MonitoringScreen].index)
+        self.setCurrentIndex(self.pages[Screens.SensorIdentification].index)
 
     def goTo(self, page):
         if page not in self.pages:
