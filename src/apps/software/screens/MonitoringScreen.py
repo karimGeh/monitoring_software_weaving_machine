@@ -30,7 +30,6 @@ class MonitoringScreen(QWidget):
         layout.addWidget(self.mpl_canvas)
 
         self.graphWrapper.setLayout(layout)
-        # self.setCentralWidget(self.graphWrapper)
         self.show()
         # !!!! initialize plot - end
 
@@ -54,27 +53,12 @@ class MonitoringScreen(QWidget):
 
     def drawLine(self):
         self.generateNewValue()
-        # print(self._x)
-        # print(self._y)
         self.mpl_canvas.fig.clf()
-        # print(plt.gcf())
-        # ax.cla()
         ax = self.mpl_canvas.fig.subplots(1)
         ax.clear()
         ax.plot(self._x, self._y)
         ax.set_ylim(0, max(self._y) + 100)
         self.mpl_canvas.fig.canvas.draw()
-        # self.mpl_canvas.fig.gca().relim()
-        # self.mpl_canvas.show()
-        # time.sleep(0.1)
-        # self.mpl_canvas.pause(0.1)
-
-        # self.show()
-        # self.ax.cla()
-        # self.ax.plot(x, y)
-        # self.ax.set_title("testSensor")
-        # self.mpl_canvas.fig.tight_layout()
-        # self.mpl_canvas.fig.show()
 
     def __repr__(self) -> str:
         # return super().__repr__()
