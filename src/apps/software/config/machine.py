@@ -1,6 +1,6 @@
 from lib.Sensor import Sensor
 
-PORTS = ["COM3", "COM4"]
+PORTS = ["COM5", "COM3"]
 
 SENSORS = [
     # this is a test sensor
@@ -17,3 +17,5 @@ SENSORS = [
         columns_name=["TIME", "VALUE"],
     ),
 ]
+
+SENSORS_DICT = {sensor.address: sensor for sensor in SENSORS}

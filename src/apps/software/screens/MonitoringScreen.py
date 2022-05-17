@@ -1,16 +1,24 @@
-import time
 from PyQt5.uic import loadUi
 from PyQt5.QtWidgets import QWidget
 from PyQt5 import QtWidgets
+
+import pandas as pd
+from config.machine import SENSORS_DICT
+
+from utils.MplCanvas import MplCanvas
 from matplotlib.backends.backend_qt5agg import (
     NavigationToolbar2QT as NavigationToolbar,
 )
 
-import matplotlib
-import numpy as np
-import random
+# import matplotlib
+# import numpy as np
+# import random
 
-from utils.MplCanvas import MplCanvas
+
+SENSOR_TO_WIDGET = {
+    "graph": 1,
+    "lcdSpeed": 2,
+}
 
 
 class MonitoringScreen(QWidget):
@@ -33,31 +41,44 @@ class MonitoringScreen(QWidget):
         self.show()
         # !!!! initialize plot - end
 
-        self._ref = 100
+        # self._ref = 100
         self._x = []
         self._y = []
         self._i = 0
-        self.maxPoints = 100
+        self.maxPoints = 50
 
         for _ in range(self.maxPoints):
-            self.generateNewValue()
+            self.readLastValues()
 
-    def generateNewValue(self):
-        self._ref = max(min(110, self._ref + random.randint(-3, 3)), 90)
-        self._i += 1
-        self._x += [self._i]
-        self._y += [self._ref]
-        if self._i >= self.maxPoints:
-            self._x = self._x[-self.maxPoints :]
-            self._y = self._y[-self.maxPoints :]
+    def readLastValues(self):
+        sensor = SENSORS_DICT[SENSOR_TO_WIDGET["graph"]]
+        data = pd.read_csv(sensor.file_location)
+
+        self._x = data[sensor.columns_name[0]]
+        self._y = data[sensor.columns_name[1]]
+
+        # if self._i >= self.maxPoints:
+        self._x = self._x[-self.maxPoints :]
+        self._y = self._y[-self.maxPoints :]
+
+    def readLcdValues(self):
+        sensor = SENSORS_DICT[SENSOR_TO_WIDGET["lcdSpeed"]]
+        data = pd.read_csv(sensor.file_location)
+        values = data[sensor.columns_name[1]].values
+        if len(values) == 0:
+            return
+
+        # print(values)
+        self.lcdNumberValeurBrute.display(values[-1])
 
     def drawLine(self):
-        self.generateNewValue()
+        self.readLastValues()
+        self.readLcdValues()
         self.mpl_canvas.fig.clf()
         ax = self.mpl_canvas.fig.subplots(1)
         ax.clear()
         ax.plot(self._x, self._y)
-        ax.set_ylim(0, max(self._y) + 100)
+        ax.set_ylim(0, max([*self._y, 0]) + 100)
         self.mpl_canvas.fig.canvas.draw()
 
     def __repr__(self) -> str:

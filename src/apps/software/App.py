@@ -20,9 +20,11 @@ class App(QtWidgets.QStackedWidget):
         super(App, self).__init__()
 
         self.pages = {
-            Screens.SensorIdentification: InnerWidget(self, SensorIdentification),
+            # Screens.SensorIdentification: InnerWidget(self, SensorIdentification),
             Screens.MonitoringScreen: InnerWidget(self, MonitoringScreen),
         }
+
+        self.initialScreen = Screens.MonitoringScreen
 
         for value in self.pages.values():
             self.addWidget(value.innerWidget)
@@ -30,12 +32,7 @@ class App(QtWidgets.QStackedWidget):
         self.setWindowTitle(WINDOW_TITLE)
         self.setFixedHeight(WINDOW_HEIGHT)
         self.setFixedWidth(WINDOW_WIDTH)
-        self.setCurrentIndex(self.pages[Screens.SensorIdentification].index)
-
-    # def show(self):
-    #     super(App, self).show()
-    #     # self.identify()
-    #     print("tot")
+        self.setCurrentIndex(self.pages[self.initialScreen].index)
 
     def startIdentification(self):
         self.pages[Screens.SensorIdentification].innerWidget.identify()
