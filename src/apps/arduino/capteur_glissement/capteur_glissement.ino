@@ -3,10 +3,11 @@
 #define PIN_MOTOR_1 2
 #define PIN_MOTOR_2 3
 
-#define TIME_INTERVAL 500
+#define TIME_INTERVAL 200
 
 
 int encoder_1 = 1, encoder_2 = 1;
+float longeurTisser = 0.0;
 
 
 void interuptMotor1()
@@ -36,6 +37,9 @@ void loop() {
   
   float ct = millis();
   float rapportDeTransmission = ((float) encoder_1) / encoder_2;
+  if (rapportDeTransmission != 1){
+      longeurTisser +=  0.1;
+  }
 
   encoder_1 = 1;
   encoder_2 = 1;
@@ -44,6 +48,8 @@ void loop() {
   Serial.print(",");
   Serial.print(ct);
   Serial.print(",");
-  Serial.println(rapportDeTransmission);
+  Serial.print(rapportDeTransmission);
+  Serial.print(",");
+  Serial.println(longeurTisser);
 
 }

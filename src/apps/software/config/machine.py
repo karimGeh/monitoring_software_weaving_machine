@@ -11,7 +11,7 @@ SENSORS = [
         name="capteur_glissement",
         address=1,
         file_location="./src/apps/software/db/capteur_glissement.csv",
-        columns_name=["TIME", "RAPPORT_DE_TRANSMISSION"],
+        columns_name=["TIME", "RAPPORT_DE_TRANSMISSION", "LONGEUR_TISSER"],
     ),
     Sensor(
         name="test_sensor_2",

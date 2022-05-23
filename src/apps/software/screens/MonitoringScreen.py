@@ -86,11 +86,13 @@ class MonitoringScreen(QWidget):
         sensor = SENSORS_DICT[SENSOR_TO_WIDGET["lcd_rapportTransmissionReel"]]
         data = pd.read_csv(sensor.file_location)
         values = data[sensor.columns_name[1]].values
-        if len(values) == 0:
+        longeur_tisser = data[sensor.columns_name[2]].values
+        if len(values) == 0 or len(longeur_tisser) == 0:
             return
 
         # print(values)
         self.lcd_rapportTransmissionReel.display(values[-1])
+        self.lcd_longeurTisser.display(longeur_tisser[-1])
 
     def drawLine(self):
         self.readLastValues()

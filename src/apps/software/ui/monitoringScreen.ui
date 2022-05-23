@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>540</height>
+    <width>1920</width>
+    <height>1080</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -26,10 +26,10 @@
   <widget class="QLabel" name="labelValeurBrute_2">
    <property name="geometry">
     <rect>
-     <x>540</x>
-     <y>285</y>
-     <width>101</width>
-     <height>16</height>
+     <x>1310</x>
+     <y>540</y>
+     <width>361</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
@@ -41,8 +41,8 @@
     <rect>
      <x>20</x>
      <y>20</y>
-     <width>491</width>
-     <height>111</height>
+     <width>1231</width>
+     <height>241</height>
     </rect>
    </property>
    <property name="autoFillBackground">
@@ -52,21 +52,21 @@
     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.1pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:16.2pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:18pt; font-weight:696;&quot;&gt;Machine de tissage&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt; font-style:italic;&quot;&gt;Réalisée par:&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:8pt; font-style:italic; color:#740000;&quot;&gt;ABOUZOUL Walid&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:8pt; font-style:italic; color:#740000;&quot;&gt;GEHAD Karim&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:8pt; font-style:italic; color:#740000;&quot;&gt;ZIAT Achraf&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:16pt; font-style:italic;&quot;&gt;Réalisée par:&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:16pt; font-style:italic; color:#740000;&quot;&gt;ABOUZOUL Walid&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:16pt; font-style:italic; color:#740000;&quot;&gt;GEHAD Karim&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:16pt; font-style:italic; color:#740000;&quot;&gt;ZIAT Achraf&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLCDNumber" name="lcdNumberValeurBrute">
    <property name="geometry">
     <rect>
-     <x>540</x>
-     <y>235</y>
-     <width>96</width>
-     <height>36</height>
+     <x>1310</x>
+     <y>440</y>
+     <width>161</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -80,10 +80,10 @@ color: rgb(0, 170, 0);</string>
   <widget class="QLabel" name="labelUnite">
    <property name="geometry">
     <rect>
-     <x>540</x>
-     <y>165</y>
-     <width>111</width>
-     <height>16</height>
+     <x>1310</x>
+     <y>310</y>
+     <width>561</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
@@ -93,8 +93,8 @@ color: rgb(0, 170, 0);</string>
   <widget class="QTextBrowser" name="textBrowser">
    <property name="geometry">
     <rect>
-     <x>540</x>
-     <y>180</y>
+     <x>1310</x>
+     <y>340</y>
      <width>191</width>
      <height>31</height>
     </rect>
@@ -103,17 +103,17 @@ color: rgb(0, 170, 0);</string>
     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.1pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:16.2pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:8pt;&quot;&gt;Roulements lubrifiés&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
-  <widget class="QLCDNumber" name="lcdNumberValeurBrute_2">
+  <widget class="QLCDNumber" name="lcd_longeurTisser">
    <property name="geometry">
     <rect>
-     <x>540</x>
-     <y>300</y>
-     <width>96</width>
-     <height>36</height>
+     <x>1310</x>
+     <y>580</y>
+     <width>161</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -127,36 +127,23 @@ color: rgb(0, 170, 0);</string>
   <widget class="QLabel" name="labelLubrification">
    <property name="geometry">
     <rect>
-     <x>540</x>
-     <y>220</y>
-     <width>161</width>
-     <height>16</height>
+     <x>1310</x>
+     <y>400</y>
+     <width>421</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
     <string>Nombre de tours des paliers :</string>
    </property>
   </widget>
-  <widget class="QLabel" name="labelUnite_2">
-   <property name="geometry">
-    <rect>
-     <x>540</x>
-     <y>345</y>
-     <width>111</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Etat des courroies:</string>
-   </property>
-  </widget>
   <widget class="QLCDNumber" name="lcd_rapportTransmissionReel">
    <property name="geometry">
     <rect>
-     <x>540</x>
-     <y>460</y>
-     <width>64</width>
-     <height>23</height>
+     <x>1310</x>
+     <y>950</y>
+     <width>161</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -176,11 +163,14 @@ color: rgb(0, 85, 255);</string>
   <widget class="QLabel" name="labelRapportTh">
    <property name="geometry">
     <rect>
-     <x>540</x>
-     <y>395</y>
-     <width>191</width>
-     <height>16</height>
+     <x>1310</x>
+     <y>790</y>
+     <width>441</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>Rapport de transmission théorique:</string>
@@ -189,9 +179,9 @@ color: rgb(0, 85, 255);</string>
   <widget class="QTextBrowser" name="textBrowser_2">
    <property name="geometry">
     <rect>
-     <x>540</x>
-     <y>360</y>
-     <width>191</width>
+     <x>1310</x>
+     <y>740</y>
+     <width>391</width>
      <height>31</height>
     </rect>
    </property>
@@ -199,18 +189,21 @@ color: rgb(0, 85, 255);</string>
     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.1pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:16.2pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:8pt;&quot;&gt;Pas de glissement de la courroie&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="labelRapportReel">
    <property name="geometry">
     <rect>
-     <x>540</x>
-     <y>445</y>
-     <width>161</width>
-     <height>16</height>
+     <x>1310</x>
+     <y>900</y>
+     <width>381</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>Rapport de transmission réel:</string>
@@ -219,10 +212,10 @@ p, li { white-space: pre-wrap; }
   <widget class="QLCDNumber" name="lcdNumberDelaiMesure">
    <property name="geometry">
     <rect>
-     <x>540</x>
-     <y>410</y>
-     <width>64</width>
-     <height>23</height>
+     <x>1310</x>
+     <y>830</y>
+     <width>161</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -242,10 +235,10 @@ color: rgb(0, 85, 255);</string>
   <widget class="QFrame" name="logoWrapper">
    <property name="geometry">
     <rect>
-     <x>529</x>
-     <y>19</y>
-     <width>251</width>
-     <height>121</height>
+     <x>1309</x>
+     <y>24</y>
+     <width>571</width>
+     <height>241</height>
     </rect>
    </property>
    <property name="frameShape">
@@ -257,18 +250,18 @@ color: rgb(0, 85, 255);</string>
    <widget class="QPushButton" name="startButton">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>100</width>
-      <height>100</height>
+      <x>40</x>
+      <y>20</y>
+      <width>200</width>
+      <height>200</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">#startButton{
 background-color:#00ff00;
 color:white;
-font-size:14px;	
-border-radius: 50px;	
+font-size:30px;	
+border-radius: 100px;	
 }</string>
     </property>
     <property name="text">
@@ -278,22 +271,22 @@ border-radius: 50px;
    <widget class="QPushButton" name="stopButton">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>10</y>
-      <width>100</width>
-      <height>100</height>
+      <x>310</x>
+      <y>20</y>
+      <width>200</width>
+      <height>200</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">#stopButton{
 background-color:#ff0000;
 color:white;
-font-size:14px;	
-border-radius: 50px;	
+font-size:40px;	
+border-radius: 100px;	
 }</string>
     </property>
     <property name="text">
-     <string>Arrete</string>
+     <string>Arret</string>
     </property>
    </widget>
   </widget>
@@ -301,10 +294,23 @@ border-radius: 50px;
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>150</y>
-     <width>491</width>
-     <height>371</height>
+     <y>280</y>
+     <width>1231</width>
+     <height>781</height>
     </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelValeurBrute_3">
+   <property name="geometry">
+    <rect>
+     <x>1310</x>
+     <y>700</y>
+     <width>361</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Etat des courroies</string>
    </property>
   </widget>
  </widget>
