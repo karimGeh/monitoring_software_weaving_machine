@@ -31,6 +31,7 @@ def readListenersData():
         # time.sleep(0.1)
 
 
+widget.sensorListeners = sensorListeners
 _thread.start_new_thread(readListenersData, ())
 
 

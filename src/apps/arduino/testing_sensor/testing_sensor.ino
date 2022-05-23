@@ -1,10 +1,11 @@
 // This code is not for poduction and is only 
 // for testing how the python code will read from the arduino
 
-#define SENSOR_ADDR 1
+#define SENSOR_ADDR 2
 
 
-#define TIME_INTERVAL 100.0
+#define PIN_RELAY 7
+#define TIME_INTERVAL 500.0
 
 int state = 0;
 float value = 100.0;
@@ -14,12 +15,27 @@ float data2;
 
 void setup()
 {
+  pinMode(PIN_RELAY, OUTPUT);
   Serial.begin(9600);
 }
 
 void loop()
 {
   delay(TIME_INTERVAL);
+
+
+  if (Serial.available() > 0)
+  {
+    int choice = Serial.read() - '0';
+    if (choice == 1)
+    {
+      digitalWrite(PIN_RELAY, HIGH);
+    }else if (choice == 0){
+      digitalWrite(PIN_RELAY, LOW);
+    }
+  }
+
+
   data = random(-2,3); // generate the integers
   // data2 = random(0, 100); // generate the numbers after the decimal point
   

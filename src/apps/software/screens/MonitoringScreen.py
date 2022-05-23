@@ -6,9 +6,10 @@ import pandas as pd
 from config.machine import SENSORS_DICT
 
 from utils.MplCanvas import MplCanvas
-from matplotlib.backends.backend_qt5agg import (
-    NavigationToolbar2QT as NavigationToolbar,
-)
+
+# from matplotlib.backends.backend_qt5agg import (
+#     NavigationToolbar2QT as NavigationToolbar,
+# )
 
 # import matplotlib
 # import numpy as np
@@ -16,8 +17,8 @@ from matplotlib.backends.backend_qt5agg import (
 
 
 SENSOR_TO_WIDGET = {
-    "graph": 1,
-    "lcdSpeed": 2,
+    "lcd_rapportTransmissionReel": 1,
+    "graph": 2,
 }
 
 
@@ -50,6 +51,26 @@ class MonitoringScreen(QWidget):
         for _ in range(self.maxPoints):
             self.readLastValues()
 
+        self.startButton.clicked.connect(self.startMotor)
+        self.stopButton.clicked.connect(self.stopMotor)
+
+    def getSensorListenerByAddr(self, addr: int):
+        i = -1
+        for sensorListener in self.master.sensorListeners:
+            i += 1
+            if sensorListener.addr == addr:
+                return sensorListener
+
+    def startMotor(self):
+        sensorListener = self.getSensorListenerByAddr(SENSOR_TO_WIDGET["graph"])
+        sensorListener.writeData(b"1")
+        print("start")
+
+    def stopMotor(self):
+        sensorListener = self.getSensorListenerByAddr(SENSOR_TO_WIDGET["graph"])
+        sensorListener.writeData(b"0")
+        print("stop")
+
     def readLastValues(self):
         sensor = SENSORS_DICT[SENSOR_TO_WIDGET["graph"]]
         data = pd.read_csv(sensor.file_location)
@@ -62,14 +83,14 @@ class MonitoringScreen(QWidget):
         self._y = self._y[-self.maxPoints :]
 
     def readLcdValues(self):
-        sensor = SENSORS_DICT[SENSOR_TO_WIDGET["lcdSpeed"]]
+        sensor = SENSORS_DICT[SENSOR_TO_WIDGET["lcd_rapportTransmissionReel"]]
         data = pd.read_csv(sensor.file_location)
         values = data[sensor.columns_name[1]].values
         if len(values) == 0:
             return
 
         # print(values)
-        self.lcdNumberValeurBrute.display(values[-1])
+        self.lcd_rapportTransmissionReel.display(values[-1])
 
     def drawLine(self):
         self.readLastValues()

@@ -1,14 +1,17 @@
 from lib.Sensor import Sensor
 
-PORTS = ["COM5", "COM3"]
+PORTS = [
+    "COM5",
+    "COM3",
+]
 
 SENSORS = [
     # this is a test sensor
     Sensor(
-        name="test_sensor_1",
+        name="capteur_glissement",
         address=1,
-        file_location="./src/apps/software/db/test_sensor1.csv",
-        columns_name=["TIME", "VALUE"],
+        file_location="./src/apps/software/db/capteur_glissement.csv",
+        columns_name=["TIME", "RAPPORT_DE_TRANSMISSION"],
     ),
     Sensor(
         name="test_sensor_2",

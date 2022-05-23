@@ -150,7 +150,7 @@ color: rgb(0, 170, 0);</string>
     <string>Etat des courroies:</string>
    </property>
   </widget>
-  <widget class="QLCDNumber" name="lcdNumberDelaiMesure_2">
+  <widget class="QLCDNumber" name="lcd_rapportTransmissionReel">
    <property name="geometry">
     <rect>
      <x>540</x>
@@ -242,9 +242,9 @@ color: rgb(0, 85, 255);</string>
   <widget class="QFrame" name="logoWrapper">
    <property name="geometry">
     <rect>
-     <x>539</x>
+     <x>529</x>
      <y>19</y>
-     <width>241</width>
+     <width>251</width>
      <height>121</height>
     </rect>
    </property>
@@ -254,23 +254,46 @@ color: rgb(0, 85, 255);</string>
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
    </property>
-   <widget class="QLabel" name="label">
+   <widget class="QPushButton" name="startButton">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>20</y>
-      <width>211</width>
-      <height>81</height>
+      <y>10</y>
+      <width>100</width>
+      <height>100</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">#startButton{
+background-color:#00ff00;
+color:white;
+font-size:14px;	
+border-radius: 50px;	
+}</string>
+    </property>
     <property name="text">
-     <string/>
+     <string>Marche</string>
     </property>
-    <property name="pixmap">
-     <pixmap resource="../resources.qrc">:/images/assets/EnsamLogo.png</pixmap>
+   </widget>
+   <widget class="QPushButton" name="stopButton">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>10</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
     </property>
-    <property name="scaledContents">
-     <bool>true</bool>
+    <property name="styleSheet">
+     <string notr="true">#stopButton{
+background-color:#ff0000;
+color:white;
+font-size:14px;	
+border-radius: 50px;	
+}</string>
+    </property>
+    <property name="text">
+     <string>Arrete</string>
     </property>
    </widget>
   </widget>
